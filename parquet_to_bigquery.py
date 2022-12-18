@@ -54,7 +54,6 @@ def validate_metadata(metadata):
     required=True,
 )
 def main(input: Path, output: str):
-    primary_column = None
     tmp_output =  f"{output}_tmp"
     metadata = None
     client = bigquery.Client()
