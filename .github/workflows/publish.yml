@@ -1,9 +1,7 @@
-name: Test
+name: Publish
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   test:
@@ -28,6 +26,6 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
-      - name: Test
+      - name: Publish
         run: |
-            ./ci/test.sh
+            ./ci/publish.sh

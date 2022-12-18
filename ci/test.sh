@@ -9,5 +9,3 @@ python bigquery_to_parquet.py \
 python parquet_to_bigquery.py \
     --input test/geography_usa_state_2019 \
     --output "cartodb-gcp-backend-data-team.geoparquet_ci.geography_usa_state_2019"
-
-  
