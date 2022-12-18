@@ -1,4 +1,4 @@
-#!/bin/bash -vx
+#!/bin/bash
 
 mkdir -p public
 
@@ -7,7 +7,7 @@ TABLES=("carto-do-public-data.carto.geography_usa_state_2019" \
       "carto-do-public-data.carto.geography_usa_censustract_2019" \
       "carto-do-public-data.carto.geography_usa_zcta5_2019") 
       # "carto-do-public-data.carto.geography_usa_blockgroup_2019")
-      
+
 # Delimiter for split       
 # IFS='.'	
 for table in ${TABLES[@]}; do
