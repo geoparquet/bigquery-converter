@@ -31,8 +31,12 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
-      - name: Publish
+      - name: Prepare file for publication
         run: |
             ./ci/publish.sh
 
-      # TODO: PUBLISH:GCS
+      - id: Publish
+        uses: 'google-github-actions/upload-cloud-storage@v1'
+        with:
+          path: 'public'
+          destination: 'geoparquet'
