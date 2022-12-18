@@ -30,7 +30,7 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
-      - name: Prepare file for publication
+      - name: Prepare files for publication
         run: |
             ./ci/pre-publish.sh
 
