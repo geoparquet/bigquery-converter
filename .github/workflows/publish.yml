@@ -1,6 +1,12 @@
 name: Publish
 
-on: workflow_dispatch
+on:
+  # TODO: TOBE REMOVED
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
 
 jobs:
   test:
@@ -28,3 +34,5 @@ jobs:
       - name: Publish
         run: |
             ./ci/publish.sh
+
+      # TODO: PUBLISH:GCS
