@@ -1,6 +1,9 @@
 name: Test
 
-on: [push]
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
@@ -25,6 +28,6 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
-    #  - name: Test
-    #    run: |
-    #       ./test/test-ci.sh
+      - name: Test
+        run: |
+            ./test/test-ci.sh
