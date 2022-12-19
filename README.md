@@ -3,7 +3,7 @@
 Experimental python scripts to import/export [GeoParquet](https://geoparquet.org) files in [Google BigQuery](https://cloud.google.com/bigquery).
 
 ## Motivation
-BigQuery supports parquet files, but for tables with geometry data it's not supported. For example, if you try to export a table with a geography column it throws the following error:
+BigQuery supports Parquet files, but they won't work if you have geometry data. For example, if you try to export a table with a geography column it throws the following error:
 >Error while reading data, error message: Type GEOGRAPHY is not currently supported for parquet exports.
 
 We've created these experimental scripts to improve this, but the ultimate goal is that Google BigQuery adopts GeoParquet as the standard to encode geospatial data inside parquet. Thus, once implemented, the current tools of BigQuery ([load](https://cloud.google.com/bigquery/docs/loading-data) and [export](https://cloud.google.com/bigquery/docs/exporting-data)) will replace these scripts.
